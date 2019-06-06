@@ -1,0 +1,230 @@
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <fstream>
+#include <string>
+using namespace std;
+
+char menu();
+void addition();
+void subtraction();
+void multiply();
+void division();
+void average();
+void maximum();
+void minimum();
+void square();
+
+
+
+ int main()
+ {
+     char choice;
+     int x,y;
+
+            do {
+                if (choice== 'q' or choice == 'Q')
+                {
+                    cout<<"The program has ended"<<endl;
+                    return 0;
+                }
+                else if (choice == '+')
+                    addition();
+                else if (choice == '-')
+                    subtraction();
+                else if (choice == '*')
+                    multiply();
+                else if (choice == '%')
+                    division();
+                else if (choice =='a' or choice =='A')
+                    average();
+                else if (choice == 'x' or choice =='X')
+                    maximum();
+                else if (choice == 'm' or choice == 'M')
+                    minimum();
+                else if (choice == 's' or choice == 'S')
+                    square();
+                    cout<<"Please make a slection from the list- Enter Q to stop"<<endl;
+                    cout<<"+ - * % A(Average) X(Maximum) M(Minimum) S(Square) "<<endl<<endl;
+                    cin>>choice;
+
+            } while (choice != 'Q' or choice != 'q');
+
+    return 0;
+ }
+/*
+ * Function Menu
+ * Input-
+ *  Choice from menu
+ * Output-
+ *  depending on choice calls function
+*/
+char menu()
+{
+    char choice;
+    //Make a selection from the menu to get started
+    cout<<"Please make a slection from the list- Enter Q to stop"<<endl;
+    cout<<"+ - * % A(Average) X(Maximum) M(Minimum) S(Square) "<<endl;
+    cin>>choice;
+    return choice;
+}
+/*
+ * Function Addition
+ * Input-
+ *  Value of x
+ *  Value of y
+ * Output-
+ *  sum of x and y using + operation
+ */
+void addition()
+ {
+     int x, y;
+     // Prompt user to imput two values
+     cout<<"Enter two values"<<endl;
+     cin>>x; // first value
+     cin>>y; // second value
+     int answer = x+y;
+
+     cout<<"The sum of "<<x<<" and "<<y<< " is "<<answer<<endl<<endl<<endl;
+     //return 1;
+ }
+
+/*
+ * Function subtraction
+ * Input-
+ *  value of x
+ *  value of y
+ * Output-
+ *  sum of x and y using - operation
+ */
+void subtraction()
+ {
+     int x, y;
+     // Prompt user to imput two values
+     cout<<"Enter two values"<<endl;
+     cin>>x; // first value
+     cin>>y; // second value
+     int answer = x-y;
+     cout<<"The sum of "<<x<<" and "<<y<< " is "<<answer<<endl<<endl<<endl;
+ }
+
+/*
+ * Function Multiply
+ * Input-
+ *  value of x
+ *  value of y
+ * Output-
+ *  multiply x and y then give prodoct
+ */
+void multiply()
+ {
+     int x, y;
+     // Prompt user to imput two values
+     cout<<"Enter two values"<<endl;
+     cin>>x; // first value
+     cin>>y; // second value
+     int answer = x*y;
+     cout<<"Product of "<<x<<" and "<<y<< " is "<<answer<<endl<<endl<<endl;
+ }
+
+/*
+ * Function division
+ * Input-
+ *  value of x
+ *  value of y
+ * Output-
+ *  divides x by y and gives answer
+ */
+void division()
+ {
+     double x, y;
+     // Prompt user to imput two values
+     cout<<"Enter two values"<<endl;
+     cin>>x; // first value
+     cin>>y; // second value
+     double answer = x/y;
+     cout<<"Division of "<<x<<" by " <<y<<" is "<<answer<<endl<<endl<<endl;
+ }
+
+/*
+ * Function Average
+ * Input-
+ *  value of x
+ *  value of y
+ * Output-
+ *  sum of x and y divided by 2 yeilds average
+ */
+void average()
+ {
+     int x, y;
+     // Prompt user to imput two values
+     cout<<"Enter two values"<<endl;
+     cin>>x; // first value
+     cin>>y; // second value
+     //double average;
+     double average = (((double)x+y)/2);
+     cout<<"The average of "<<x<<" and "<<y<<" is "<<average<<endl<<endl<<endl;
+ }
+
+/*
+ * Function Maximum
+ * Input-
+ *  value of x
+ *  value of y
+ * Output-
+ *  max of x and y
+ */
+void maximum()
+ {
+     int x, y;
+     // Prompt user to imput two values
+     cout<<"Enter two values"<<endl;
+     cin>>x; // first value
+     cin>>y; // second value
+     int max;
+     if (x<y)
+        max = y; // value of max assigned
+     else
+        max = x; // value of max assigned
+     cout<<"The maximum of "<<x<<" and "<<y <<" is "<<max<<endl<<endl<<endl;
+ }
+
+/*
+ * Function Minimum
+ * Input-
+ *  value of x
+ *  value of y
+ * Output-
+ *  minimum of x and y
+ */
+void minimum()
+ {
+     int x, y;
+     // Prompt user to imput two values
+     cout<<"Enter two values"<<endl;
+     cin>>x; // first value
+     cin>>y; // second value
+     int min;
+     if (x<y)
+        min = x;
+     else
+        min = y;
+     cout<<"The minimum of "<<x<<" and "<<y<<" is "<<min<<endl<<endl<<endl;
+ }
+
+/*
+ * Function square
+ * Input-
+ *  value of x
+ * Output-
+ *  square of x
+ */
+void square()
+ {
+     int x;
+     // Prompt user to imput two values
+     cout<<"Enter a value"<<endl;
+     cin>>x;
+     int answer = x*x;
+     cout<<"The square of "<<x<<" is "<<answer<<endl<<endl<<endl;
+ }
